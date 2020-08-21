@@ -32,7 +32,7 @@ export class SyllableCounterProvider
   
   refresh(): void {
     this.textEditor = vscode.window.activeTextEditor 
-    this._onDidChangeTreeData.fire();
+    this._onDidChangeTreeData.fire(void 0);
   }
   
 }

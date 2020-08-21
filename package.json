@@ -16,40 +16,50 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [{
-			"command": "syllableCounter.refreshEntry",
-			"title": "Refresh",
-			"icon": {
-				"light": "resources/light/refresh.svg",
-				"dark": "resources/dark/refresh.svg"
+		"commands": [
+			{
+				"command": "syllableCounter.refreshEntry",
+				"title": "Refresh",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
 			}
-		}],
+		],
 		"views": {
-			"syllableCounterContainer": [{
-				"id": "syllableCounter",
-				"name": "Syllable Counter",
-				"icon": "resources/light/document-search.svg",
-				"contextualTitle": "Syllable Counter"
-			}]
+			"syllableCounterContainer": [
+				{
+					"id": "syllableCounter",
+					"name": "Syllable Counter",
+					"icon": "resources/light/document-search.svg",
+					"contextualTitle": "Syllable Counter"
+				}
+			]
 		},
 		"viewsContainers": {
-			"activitybar": [{
-				"id": "syllableCounterContainer",
-				"title": "Syllable Counter",
-				"icon": "resources/light/document-search.svg"
-			}]
+			"activitybar": [
+				{
+					"id": "syllableCounterContainer",
+					"title": "Syllable Counter",
+					"icon": "resources/light/document-search.svg"
+				}
+			]
 		},
 		"menus": {
-			"view/title": [{
-				"command": "syllableCounter.refreshEntry",
-				"when": "view == syllableCounter",
-				"group": "navigation"
-			}]
+			"view/title": [
+				{
+					"command": "syllableCounter.refreshEntry",
+					"when": "view == syllableCounter",
+					"group": "navigation"
+				}
+			]
 		},
-		"viewsWelcome": [{
-			"view": "syllableCounter",
-			"contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)"
-		}]
+		"viewsWelcome": [
+			{
+				"view": "syllableCounter",
+				"contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -68,10 +78,13 @@
 		"eslint": "^7.1.0"
 	},
 	"dependencies": {
+		"@types/mocha": "^8.0.3",
+		"@types/syllable": "^4.1.0",
 		"jsonc-parser": "^0.4.2",
 		"minimist": "^0.2.1",
 		"mkdirp": "^0.5.1",
 		"rimraf": "^2.6.2",
-		"syllable": "^4.1.0"
+		"syllable": "^4.1.0",
+		"vscode-test": "^1.4.0"
 	}
 }
