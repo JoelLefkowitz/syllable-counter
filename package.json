@@ -16,50 +16,40 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "syllableCounter.refreshEntry",
-				"title": "Refresh",
-				"icon": {
-					"light": "resources/light/refresh.svg",
-					"dark": "resources/dark/refresh.svg"
-				}
+		"commands": [{
+			"command": "syllableCounter.refreshEntry",
+			"title": "Refresh",
+			"icon": {
+				"light": "resources/light/refresh.svg",
+				"dark": "resources/dark/refresh.svg"
 			}
-		],
+		}],
 		"views": {
-			"syllableCounterContainer": [
-			  {
+			"syllableCounterContainer": [{
 				"id": "syllableCounter",
 				"name": "Syllable Counter",
 				"icon": "resources/light/document-search.svg",
 				"contextualTitle": "Syllable Counter"
-			  }
-			]
-		  },  
+			}]
+		},
 		"viewsContainers": {
-			"activitybar": [
-			  {
+			"activitybar": [{
 				"id": "syllableCounterContainer",
 				"title": "Syllable Counter",
 				"icon": "resources/light/document-search.svg"
-			  }
-			]
-		  },
+			}]
+		},
 		"menus": {
-			"view/title": [
-				{
-					"command": "syllableCounter.refreshEntry",
-					"when": "view == syllableCounter",
-					"group": "navigation"
-				}
-			]
-		  },
-		"viewsWelcome": [
-			{
+			"view/title": [{
+				"command": "syllableCounter.refreshEntry",
+				"when": "view == syllableCounter",
+				"group": "navigation"
+			}]
+		},
+		"viewsWelcome": [{
 			"view": "syllableCounter",
-			"contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)",
-			}
-		]
+			"contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)"
+		}]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
