@@ -15,7 +15,7 @@ Count and display the number of syllables per line in the active document.
 
 ### Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
+Please read [CONTRIBUTING.md](https://github.com/JoelLefkowitz/syllable-counter/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
 
 ### Versioning
 
@@ -29,7 +29,7 @@ See also the list of contributors who participated in this project.
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/JoelLefkowitz/syllable-counter/blob/master/LICENSE.md) file for details
 
 ### Acknowledgments
 
