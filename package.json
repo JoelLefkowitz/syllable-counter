@@ -4,6 +4,7 @@
 	"description": "Syllable counter tree view",
 	"version": "1.0.0",
 	"publisher": "joellefkowitz",
+	"repository": "https://github.com/JoelLefkowitz/syllable-counter/",
 	"engines": {
 		"vscode": "^1.46.0"
 	},
