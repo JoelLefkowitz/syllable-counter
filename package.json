@@ -16,7 +16,7 @@
 		"onView:syllableCounter",
 		"onCommand:syllableCounter.refreshEntry"
 	],
-	"main": "./out/extension.js",
+	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
