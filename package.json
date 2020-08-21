@@ -2,7 +2,7 @@
 	"name": "syllable-counter",
 	"displayName": "Syllable Counter",
 	"description": "Syllable counter tree view",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"publisher": "joellefkowitz",
 	"repository": "https://github.com/JoelLefkowitz/syllable-counter/",
 	"icon": "resources/png/document-search.png",
