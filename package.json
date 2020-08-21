@@ -2,7 +2,7 @@
 	"name": "syllable-counter",
 	"displayName": "Syllable Counter",
 	"description": "Syllable counter tree view",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher": "joellefkowitz",
 	"engines": {
 		"vscode": "^1.46.0"
@@ -11,18 +11,55 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onView:syllableCounter"
+		"onView:syllableCounter",
+		"onCommand:syllableCounter.refreshEntry"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"commands": [
+			{
+				"command": "syllableCounter.refreshEntry",
+				"title": "Refresh",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
+			}
+		],
 		"views": {
-			"explorer": [
+			"syllableCounterContainer": [
+			  {
+				"id": "syllableCounter",
+				"name": "Syllable Counter",
+				"icon": "resources/light/document-search.svg",
+				"contextualTitle": "Syllable Counter"
+			  }
+			]
+		  },  
+		"viewsContainers": {
+			"activitybar": [
+			  {
+				"id": "syllableCounterContainer",
+				"title": "Syllable Counter",
+				"icon": "resources/light/document-search.svg"
+			  }
+			]
+		  },
+		"menus": {
+			"view/title": [
 				{
-					"id": "syllableCounter",
-					"name": "Syllable Counter"
+					"command": "syllableCounter.refreshEntry",
+					"when": "view == syllableCounter",
+					"group": "navigation"
 				}
 			]
-		}
+		  },
+		"viewsWelcome": [
+			{
+			"view": "syllableCounter",
+			"contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)",
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

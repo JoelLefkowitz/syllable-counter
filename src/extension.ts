@@ -1,11 +1,15 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-import { SyllableCounterProvider } from "./syllableCounter"
+import { SyllableCounterProvider } from "./syllableCounter";
 
 export function activate(context: vscode.ExtensionContext) {
-	vscode.window.createTreeView('syllableCounter', {
-		treeDataProvider: new SyllableCounterProvider(vscode.window.activeTextEditor)
-	  });
+  const treeDataProvider = new SyllableCounterProvider();
+
+  vscode.window.registerTreeDataProvider("syllableCounter", treeDataProvider);  
+
+  vscode.commands.registerCommand("syllableCounter.refreshEntry", () =>
+    treeDataProvider.refresh()
+  );
 }
 
 export function deactivate() {}

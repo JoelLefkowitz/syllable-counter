@@ -1,65 +1,49 @@
-# syllable-counter README
+# Syllable counter
 
-This is the README for your extension "syllable-counter". After writing up a brief description, we recommend including the following sections.
+Count and display the number of syllables per line in the active document.
 
-## Features
+### Status
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+| Source     | Shields                                                        |
+| ---------- | -------------------------------------------------------------- |
+| Project    | ![license][license] ![release][release]                        |
+| Raised     | [![issues][issues]][issues_link] [![pulls][pulls]][pulls_link] |
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+![Example usage][example_gif]
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Contributing
 
-## Requirements
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### Versioning
 
-## Extension Settings
+[SemVer](http://semver.org/) is used for versioning. For a list of versions available, see the tags on this repository.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### Author
 
-For example:
+- **Joel Lefkowitz** - _Initial work_ - [Joel Lefkowitz](https://github.com/JoelLefkowitz)
 
-This extension contributes the following settings:
+See also the list of contributors who participated in this project.
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### License
 
-## Known Issues
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### Acknowledgments
 
-## Release Notes
+None yet!
 
-Users appreciate release notes as you update your extension.
+<!--- Table links --->
 
-### 1.0.0
+[license]: https://img.shields.io/github/license/joellefkowitz/syllable-counter
+[release]: https://img.shields.io/github/v/tag/joellefkowitz/syllable-counter
 
-Initial release of ...
+[issues]: https://img.shields.io/github/issues/joellefkowitz/syllable-counter "Issues"
+[issues_link]: https://github.com/JoelLefkowitz/syllable-counter/issues
 
-### 1.0.1
+[pulls]: https://img.shields.io/github/issues-pr/joellefkowitz/syllable-counter "Pull requests"
+[pulls_link]: https://github.com/JoelLefkowitz/syllable-counter/pulls
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[example_gif]: https://github.com/JoelLefkowitz/syllable-counter/blob/master/example.gif "Example usage"

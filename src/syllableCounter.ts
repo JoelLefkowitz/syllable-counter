@@ -4,7 +4,14 @@ import countSyllables = require('syllable');
 
 export class SyllableCounterProvider
   implements vscode.TreeDataProvider<SyllableTreeItem> {
-  constructor(private textEditor: vscode.TextEditor | undefined) {}
+  
+  private textEditor : vscode.TextEditor | undefined
+  private _onDidChangeTreeData: vscode.EventEmitter<SyllableTreeItem | undefined> = new vscode.EventEmitter<SyllableTreeItem | undefined>();
+  readonly onDidChangeTreeData: vscode.Event<SyllableTreeItem | undefined> = this._onDidChangeTreeData.event;
+
+  constructor() {
+    this.textEditor = vscode.window.activeTextEditor 
+  }
 
   getTreeItem(element: SyllableTreeItem): SyllableTreeItem {
     return element;
@@ -22,6 +29,12 @@ export class SyllableCounterProvider
       )
     );
   }
+  
+  refresh(): void {
+    this.textEditor = vscode.window.activeTextEditor 
+    this._onDidChangeTreeData.fire();
+  }
+  
 }
 
 class SyllableTreeItem extends vscode.TreeItem {
