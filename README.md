@@ -1,4 +1,4 @@
-# Syllable counter
+# Syllable Counter
 
 Count and display the number of syllables per line in the active document.
 

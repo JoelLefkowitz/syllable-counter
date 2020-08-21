@@ -6,7 +6,6 @@
 	"publisher": "joellefkowitz",
 	"repository": "https://github.com/JoelLefkowitz/syllable-counter/",
 	"icon": "resources/png/document-search.png",
-	"enableProposedApi": true,
 	"engines": {
 		"vscode": "^1.46.0"
 	},
