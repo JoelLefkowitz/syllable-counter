@@ -94,5 +94,14 @@
 		"rimraf": "^2.6.2",
 		"syllable": "^4.1.0",
 		"vscode-test": "^1.4.0"
-	}
+	},
+  "portfolio": {
+    "project_type": "Community work",
+    "languages": ["Typescript"],
+    "frameworks": ["vscode-sdk"],
+    "paradigms": [
+      "Event driven programming"
+    ],
+    "status": ["In development"]
+  }
 }
