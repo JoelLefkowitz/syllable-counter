@@ -1,6 +1,5 @@
-  import * as vscode from "vscode";
-
 import { SyllableCounterProvider } from "./syllableCounter";
+import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
   const treeDataProvider = new SyllableCounterProvider();
