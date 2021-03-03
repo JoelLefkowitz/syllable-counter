@@ -1,0 +1,6 @@
+project: syllable-counter
+version: 1.3.0
+author: Joel Lefkowitz
+verbose_name: Syllable counter
+html_title: Syllable counter
+github_url: JoelLefkowitz/syllable-counter

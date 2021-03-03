@@ -1,107 +1,113 @@
 {
-	"name": "syllable-counter",
-	"displayName": "Syllable Counter",
-	"description": "Syllable counter tree view",
-	"version": "1.3.0",
-	"publisher": "joellefkowitz",
-	"repository": "https://github.com/JoelLefkowitz/syllable-counter/",
-	"icon": "resources/png/document-search.png",
-	"engines": {
-		"vscode": "^1.46.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onView:syllableCounter",
-		"onCommand:syllableCounter.refreshEntry"
-	],
-	"main": "./dist/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "syllableCounter.refreshEntry",
-				"title": "Refresh",
-				"icon": {
-					"light": "resources/light/refresh.svg",
-					"dark": "resources/dark/refresh.svg"
-				}
-			}
-		],
-		"views": {
-			"syllableCounterContainer": [
-				{
-					"id": "syllableCounter",
-					"name": "Syllable Counter",
-					"icon": "resources/light/document-search.svg",
-					"contextualTitle": "Syllable Counter"
-				}
-			]
-		},
-		"viewsContainers": {
-			"activitybar": [
-				{
-					"id": "syllableCounterContainer",
-					"title": "Syllable Counter",
-					"icon": "resources/light/document-search.svg"
-				}
-			]
-		},
-		"menus": {
-			"view/title": [
-				{
-					"command": "syllableCounter.refreshEntry",
-					"when": "view == syllableCounter",
-					"group": "navigation"
-				}
-			]
-		},
-		"viewsWelcome": [
-			{
-				"view": "syllableCounter",
-				"contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "webpack --mode production",
-		"webpack": "webpack --mode development",
-		"webpack-dev": "webpack --mode development --watch",
-		"compile": "tsc -p ./",
-		"test-compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"lint": "eslint . --ext .ts,.tsx"
-	},
-	"devDependencies": {
-		"@types/mkdirp": "^0.5.2",
-		"@types/node": "^12.12.0",
-		"@types/rimraf": "^2.0.2",
-		"@types/vscode": "^1.45.0",
-		"@typescript-eslint/eslint-plugin": "^3.0.2",
-		"@typescript-eslint/parser": "^3.0.2",
-		"eslint": "^7.1.0",
-		"ts-loader": "^8.0.2",
-		"typescript": "^3.9.4",
-		"webpack": "^4.44.1",
-		"webpack-cli": "^3.3.12"
-	},
-	"dependencies": {
-		"@types/mocha": "^8.0.3",
-		"@types/syllable": "^4.1.0",
-		"jsonc-parser": "^0.4.2",
-		"minimist": "^0.2.1",
-		"mkdirp": "^0.5.1",
-		"rimraf": "^2.6.2",
-		"syllable": "^4.1.0",
-		"vscode-test": "^1.4.0"
-	},
+  "name": "syllable-counter",
+  "displayName": "Syllable Counter",
+  "description": "Syllable counter tree view",
+  "version": "1.3.0",
+  "publisher": "joellefkowitz",
+  "repository": "https://github.com/JoelLefkowitz/syllable-counter/",
+  "icon": "resources/png/document-search.png",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:syllableCounter",
+    "onCommand:syllableCounter.refreshEntry"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "syllableCounter.refreshEntry",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      }
+    ],
+    "views": {
+      "syllableCounterContainer": [
+        {
+          "id": "syllableCounter",
+          "name": "Syllable Counter",
+          "icon": "resources/light/document-search.svg",
+          "contextualTitle": "Syllable Counter"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "syllableCounterContainer",
+          "title": "Syllable Counter",
+          "icon": "resources/light/document-search.svg"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "syllableCounter.refreshEntry",
+          "when": "view == syllableCounter",
+          "group": "navigation"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "syllableCounter",
+        "contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "webpack --mode production",
+    "webpack": "webpack --mode development",
+    "webpack-dev": "webpack --mode development --watch",
+    "compile": "tsc -p ./",
+    "test-compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "@types/mkdirp": "^0.5.2",
+    "@types/node": "^12.12.0",
+    "@types/rimraf": "^2.0.2",
+    "@types/vscode": "^1.45.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.4",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@types/mocha": "^8.0.3",
+    "@types/syllable": "^4.1.0",
+    "jsonc-parser": "^0.4.2",
+    "minimist": "^0.2.1",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "syllable": "^4.1.0",
+    "vscode-test": "^1.4.0"
+  },
   "portfolio": {
     "project_type": "Community work",
-    "languages": ["Typescript"],
-    "frameworks": ["vscode-sdk"],
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "vscode-sdk"
+    ],
     "paradigms": [
       "Event driven programming"
     ],
-    "status": ["In development"]
+    "status": [
+      "In development"
+    ]
   }
 }
