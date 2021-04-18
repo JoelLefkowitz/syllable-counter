@@ -1,0 +1,43 @@
+output_dir: .
+
+clear_top_level: true
+logical_grouping: true
+
+collections:
+  - common
+  - typescript
+
+loader_paths:
+  - docs
+
+render_context:
+  project:
+    project_name: syllable-counter
+    version: 0.1.0
+
+    verbose_name: Syllable counter
+    description: Count and display the number of syllables per line in the active document.
+
+    repository: https://github.com/JoelLefkowitz/syllable-counter
+    codacy_id: f5f5ce45a1594391abde33a206f53d84
+
+    inserts:
+      - usage.md
+
+  author:
+    author: Joel Lefkowitz
+    author_email: joellefkowitz@hotmail.com
+    author_github_handle: joellefkowitz
+
+  portfolio:
+    is_portfolio: true
+    status_level: 5
+
+    languages:
+      - TypeScript
+
+    frameworks:
+      - VS Code sdk
+
+    paradigms:
+      - Event driven programming
