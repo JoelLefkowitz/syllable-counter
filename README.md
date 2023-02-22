@@ -12,6 +12,10 @@ Count and display the number of syllables per line in the active document.
 | Repository | ![open_issues] ![closed_issues] ![open_pulls] ![closed_pulls]          |
 | Activity   | ![contributors] ![monthly_commits] ![last_commit]                      |
 
+## Usage
+
+![example](./docs/example.gif)
+
 ## Tests
 
 To run tests:

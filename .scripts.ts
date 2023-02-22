@@ -10,6 +10,9 @@ export default {
     }),
     format: "prettier . --write",
     test: "jest",
-    build: "webpack --mode production",
+    build: concurrent({
+      webpack: "webpack --mode production",
+      resources: "cp -r resources dist",
+    }),
   },
 };
