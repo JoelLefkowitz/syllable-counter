@@ -9,7 +9,7 @@ sys.path.append("..")
     Sphinx core settings
 """
 project = "syllable-counter"
-version = "1.3.0"
+version = "1.4.0"
 author = "Joel Lefkowitz"
 master_doc = "index"
 
