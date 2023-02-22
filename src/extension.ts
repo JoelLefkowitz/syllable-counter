@@ -1,14 +1,16 @@
-import { SyllableCounterProvider } from "./syllableCounter";
-import * as vscode from "vscode";
+import { ExtensionContext, commands, window } from "vscode";
 
-export function activate(context: vscode.ExtensionContext) {
-  const treeDataProvider = new SyllableCounterProvider();
+import { TreeDataProvider } from "./TreeDataProvider";
 
-  vscode.window.registerTreeDataProvider("syllableCounter", treeDataProvider);
+export const activate = (_: ExtensionContext): void => {
+  const provider = new TreeDataProvider();
 
-  vscode.commands.registerCommand("syllableCounter.refreshEntry", () =>
-    treeDataProvider.refresh()
+  window.registerTreeDataProvider("syllableCounter", provider);
+
+  commands.registerCommand("syllableCounter.refreshEntry", () =>
+    provider.refresh()
   );
-}
+};
 
-export function deactivate() {}
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+export const deactivate = (): void => {};

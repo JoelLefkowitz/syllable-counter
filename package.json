@@ -1,10 +1,17 @@
 {
   "name": "syllable-counter",
-  "displayName": "Syllable Counter",
   "description": "Syllable counter tree view Visual Studio Code extension.",
   "version": "1.3.0",
+  "repository": "https://github.com/joellefkowitz/syllable-counter/",
+  "homepage": "https://syllable-counter.readthedocs.io",
+  "author": "Joel Lefkowitz",
+  "license": "MIT",
+  "main": "./dist/extension.js",
+  "files": [
+    "dist"
+  ],
+  "displayName": "Syllable Counter",
   "publisher": "joellefkowitz",
-  "repository": "https://github.com/JoelLefkowitz/syllable-counter/",
   "icon": "resources/png/document-search.png",
   "engines": {
     "vscode": "^1.46.0"
@@ -12,11 +19,37 @@
   "categories": [
     "Other"
   ],
+  "scripts": {
+    "vscode:prepublish": "webpack --mode production"
+  },
+  "dependencies": {
+    "syllable": "^5.0.1",
+    "vscode": "^1.1.37"
+  },
+  "devDependencies": {
+    "@types/jest": "28.1.1",
+    "@types/node": "^18.11.18",
+    "@types/vscode": "^1.75.1",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.36.1",
+    "cspell": "^6.26.3",
+    "eslint": "~8.34.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
+    "jest": "28.1.1",
+    "nps": "^5.10.0",
+    "nps-utils": "^1.7.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "28.0.5",
+    "ts-node": "10.9.1",
+    "tslib": "^2.3.0",
+    "typescript": "^4.8.4"
+  },
   "activationEvents": [
     "onView:syllableCounter",
     "onCommand:syllableCounter.refreshEntry"
   ],
-  "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
@@ -63,51 +96,17 @@
       }
     ]
   },
-  "scripts": {
-    "vscode:prepublish": "webpack --mode production",
-    "webpack": "webpack --mode development",
-    "webpack-dev": "webpack --mode development --watch",
-    "compile": "tsc -p ./",
-    "test-compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "lint": "eslint . --ext .ts,.tsx"
-  },
-  "devDependencies": {
-    "@types/mkdirp": "^0.5.2",
-    "@types/node": "^12.12.0",
-    "@types/rimraf": "^2.0.2",
-    "@types/vscode": "^1.45.0",
-    "@typescript-eslint/eslint-plugin": "^3.0.2",
-    "@typescript-eslint/parser": "^3.0.2",
-    "eslint": "^7.1.0",
-    "ts-loader": "^8.0.2",
-    "typescript": "^3.9.4",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "@types/mocha": "^8.0.3",
-    "@types/syllable": "^4.1.0",
-    "jsonc-parser": "^0.4.2",
-    "minimist": "^0.2.1",
-    "mkdirp": "^0.5.1",
-    "rimraf": "^2.6.2",
-    "syllable": "^4.1.0",
-    "vscode-test": "^1.4.0"
-  },
-  "portfolio": {
-    "project_type": "Community work",
+  "metadata": {
+    "documentation": "https://syllable-counter.readthedocs.io",
+    "packages": "https://npmjs.com/package/syllable-counter",
     "languages": [
       "TypeScript"
     ],
-    "frameworks": [
-      "vscode-sdk"
-    ],
+    "frameworks": [],
     "paradigms": [
-      "Event driven programming"
+      "Functional"
     ],
-    "status": [
-      "In development"
-    ]
+    "lifecycle": "Nominal",
+    "publisher": "VSCode extensions"
   }
 }

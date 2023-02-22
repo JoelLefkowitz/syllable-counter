@@ -1,16 +1,37 @@
 {
+  "root": true,
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es6",
-    "outDir": "out",
-    "lib": ["es6"],
+    "outDir": "dist",
+    "allowUnreachableCode": false,
+    "downlevelIteration": true,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "importHelpers": true,
+    "removeComments": true,
     "sourceMap": true,
-    "rootDir": "src",
-    "strict": true /* enable all strict type-checking options */
-    /* Additional Checks */
-    // "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
-    // "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
-    // "noUnusedParameters": true,  /* Report errors on unused parameters. */
+    "allowJs": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES5",
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "lib": ["ES2021.String"]
   },
-  "exclude": ["node_modules", ".vscode-test"]
+  "ts-node": {
+    "files": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts"]
 }
