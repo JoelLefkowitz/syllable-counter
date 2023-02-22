@@ -6,7 +6,7 @@
   "homepage": "https://syllable-counter.readthedocs.io",
   "author": "Joel Lefkowitz",
   "license": "MIT",
-  "main": "./dist/extension.js",
+  "main": "./dist/main.js",
   "files": [
     "dist"
   ],

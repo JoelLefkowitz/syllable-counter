@@ -1,4 +1,3 @@
-declare module "syllable" {
-  const syllables: (value: string) => number;
-  export default syllables;
-}
+// declare module "syllable" {
+//   export const syllables: (value: string) => number;
+// }

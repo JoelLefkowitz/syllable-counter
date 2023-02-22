@@ -1,4 +1,4 @@
 export * from "./arrays"
-export * from "./extension"
+export * from "./main"
 export * from "./TreeDataProvider"
 export * from "./TreeItem"

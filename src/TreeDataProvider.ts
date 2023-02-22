@@ -9,7 +9,7 @@ import {
 
 import { TreeItem } from "./TreeItem";
 import { range } from "./arrays";
-import syllables from "syllable";
+import { syllable } from "syllable";
 
 export class TreeDataProvider implements VScodeTreeDataProvider<TreeItem> {
   emitter: EventEmitter<TreeItem | undefined> = new EventEmitter<
@@ -33,7 +33,7 @@ export class TreeDataProvider implements VScodeTreeDataProvider<TreeItem> {
       const lineText =
         trimmed.length > 30 ? `${trimmed.substring(0, 27)}...` : trimmed;
 
-      const count = syllables(text);
+      const count = syllable(text);
       const label = count === 1 ? "syllable" : "syllables";
 
       return new TreeItem(
