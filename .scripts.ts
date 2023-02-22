@@ -10,6 +10,6 @@ export default {
     }),
     format: "prettier . --write",
     test: "jest",
-    build: "tsc",
+    build: "webpack --mode production",
   },
 };
