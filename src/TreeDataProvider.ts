@@ -18,10 +18,10 @@ export class TreeDataProvider implements VScodeTreeDataProvider<TreeItem> {
 
   onDidChangeTreeData: Event<TreeItem | undefined> = this.emitter.event;
 
-  editor?: TextEditor;
+  editor: TextEditor | null;
 
   constructor() {
-    this.editor = window.activeTextEditor;
+    this.editor = window.activeTextEditor ?? null;
   }
 
   static items(document: TextDocument): TreeItem[] {
@@ -37,7 +37,7 @@ export class TreeDataProvider implements VScodeTreeDataProvider<TreeItem> {
       const label = count === 1 ? "syllable" : "syllables";
 
       return new TreeItem(
-        `Line ${lineNumber + 1} = ${count} ${label} - ${lineText}`
+        `Line ${lineNumber + 1} = ${count} ${label} - ${lineText}`,
       );
     });
   }
@@ -49,12 +49,12 @@ export class TreeDataProvider implements VScodeTreeDataProvider<TreeItem> {
 
   getChildren(_: TreeItem): Thenable<TreeItem[]> {
     return Promise.resolve(
-      this.editor ? TreeDataProvider.items(this.editor.document) : []
+      this.editor ? TreeDataProvider.items(this.editor.document) : [],
     );
   }
 
   refresh(): void {
-    this.editor = window.activeTextEditor;
+    this.editor = window.activeTextEditor ?? null;
     this.emitter.fire();
   }
 }

@@ -7,9 +7,9 @@ export const activate = (_: ExtensionContext): void => {
 
   window.registerTreeDataProvider("syllableCounter", provider);
 
-  commands.registerCommand("syllableCounter.refreshEntry", () =>
-    provider.refresh()
-  );
+  commands.registerCommand("syllableCounter.refreshEntry", () => {
+    provider.refresh();
+  });
 };
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
