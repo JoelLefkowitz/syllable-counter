@@ -7,6 +7,7 @@ Counts and displays the number of syllables per line in the active document.
 ![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/syllable-counter/review.yml)
 ![Version](https://img.shields.io/npm/v/syllable-counter)
 ![Downloads](https://img.shields.io/npm/dw/syllable-counter)
+![Size](https://img.shields.io/bundlephobia/min/syllable-counter)
 ![Quality](https://img.shields.io/codacy/grade/f5f5ce45a1594391abde33a206f53d84)
 ![Coverage](https://img.shields.io/codacy/coverage/f5f5ce45a1594391abde33a206f53d84)
 
@@ -14,11 +15,25 @@ Counts and displays the number of syllables per line in the active document.
 
 ![Example](docs/example.gif)
 
+## Installing
+
+```bash
+npm install syllable-counter
+```
+
 ## Documentation
 
 Documentation and more detailed examples are hosted on [Github Pages](https://joellefkowitz.github.io/syllable-counter).
 
 ## Tooling
+
+### Dependencies
+
+To install dependencies:
+
+```bash
+yarn install
+```
 
 ### Tests
 
@@ -72,8 +87,8 @@ bump2version patch
 
 Lots of love to the open source community!
 
-<p align='center'>
+<div align='center'>
     <img width=200 height=200 src='https://media.giphy.com/media/osAcIGTSyeovPq6Xph/giphy.gif' alt='Be kind to your mind' />
     <img width=200 height=200 src='https://media.giphy.com/media/KEAAbQ5clGWJwuJuZB/giphy.gif' alt='Love each other' />
     <img width=200 height=200 src='https://media.giphy.com/media/WRWykrFkxJA6JJuTvc/giphy.gif' alt="It's ok to have a bad day" />
-</p>
+</div>

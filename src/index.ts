@@ -1,4 +1,3 @@
-export * from "./arrays";
-export * from "./main";
-export * from "./TreeDataProvider";
-export * from "./TreeItem";
+export { activate, deactivate } from "./main";
+export { TreeDataProvider } from "./TreeDataProvider";
+export { TreeItem } from "./TreeItem";
