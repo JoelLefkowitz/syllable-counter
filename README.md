@@ -13,7 +13,7 @@ Counts and displays the number of syllables per line in the active document.
 
 ## Example
 
-![Example](docs/example.gif)
+![Example](docs/images/example.gif)
 
 ## Installing
 

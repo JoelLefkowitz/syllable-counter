@@ -12,7 +12,9 @@
   ],
   "keywords": [
     "syllable",
-    "counter"
+    "counter",
+    "lines",
+    "tree"
   ],
   "packageManager": "yarn@4.1.1",
   "metadata": {
