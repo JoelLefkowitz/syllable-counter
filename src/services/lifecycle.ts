@@ -1,6 +1,5 @@
 import { ExtensionContext, commands, window } from "vscode";
-
-import { TreeDataProvider } from "./TreeDataProvider";
+import { TreeDataProvider } from "../models/TreeDataProvider";
 
 export const activate = (_: ExtensionContext): void => {
   const provider = new TreeDataProvider();

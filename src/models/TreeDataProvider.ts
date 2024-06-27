@@ -6,9 +6,8 @@ import {
   TreeDataProvider as VScodeTreeDataProvider,
   window,
 } from "vscode";
-
 import { TreeItem } from "./TreeItem";
-import { range } from "./arrays";
+import { range } from "../services/arrays";
 import { syllable } from "syllable";
 
 export class TreeDataProvider implements VScodeTreeDataProvider<TreeItem> {

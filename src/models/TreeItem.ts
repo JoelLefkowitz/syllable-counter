@@ -1,6 +1,5 @@
-import { TreeItemCollapsibleState, TreeItem as VSCodeTreeItem } from "vscode";
-
 import path from "path";
+import { TreeItemCollapsibleState, TreeItem as VSCodeTreeItem } from "vscode";
 
 export class TreeItem extends VSCodeTreeItem {
   override iconPath = {
