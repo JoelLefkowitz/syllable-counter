@@ -4,7 +4,7 @@ Syllable counter tree view VSCode extension.
 
 Counts and displays the number of syllables per line in the active document.
 
-![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/syllable-counter/review.yml)
+![Review](https://img.shields.io/github/actions/workflow/status/JoelLefkowitz/syllable-counter/review.yaml)
 ![Version](https://img.shields.io/npm/v/syllable-counter)
 ![Downloads](https://img.shields.io/npm/dw/syllable-counter)
 ![Size](https://img.shields.io/bundlephobia/min/syllable-counter)

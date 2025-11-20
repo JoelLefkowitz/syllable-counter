@@ -34,9 +34,10 @@
     "postpack": "pinst --enable",
     "lint": "cspell . --dot --gitignore && eslint . --fix && tsc --noEmit && trufflehog3",
     "format": "prettier . --write",
-    "build": "tsc",
+    "build": "rollup -c rollup.config.js",
     "test": "jest",
-    "docs": "typedoc --options docs/typedoc/typedoc.json && ts-node ./docs/typedoc/assets.ts"
+    "docs": "typedoc --options docs/typedoc/typedoc.json && ts-node ./docs/typedoc/assets.ts",
+    "vscode:prepublish": "yarn build"
   },
   "resolutions": {
     "cliui": "^8.0.1",
@@ -47,6 +48,8 @@
     "vscode": "^1.1.37"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/glob": "^8.1.0",
     "@types/jest": "29.0.0",
     "@types/node": "^18.11.0",
@@ -62,11 +65,68 @@
     "pinst": "^3.0.0",
     "prettier": "^3.0.0",
     "prettier-plugin-jsdoc": "^1.3.0",
+    "rollup": "^4.18.0",
+    "rollup-plugin-ts": "^3.4.5",
     "ts-jest": "^29.0.0",
     "ts-node": "^10.9.2",
     "tslib": "^2.3.0",
     "typedoc": "^0.25.7",
     "typedoc-material-theme": "^1.0.2",
     "typescript": "~5.3.0"
+  },
+  "displayName": "Syllable counter",
+  "publisher": "joellefkowitz",
+  "icon": "resources/png/document-search.png",
+  "engines": {
+    "vscode": "^1.75.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "syllableCounter.refreshEntry",
+        "title": "Refresh",
+        "icon": {
+          "light": "resources/light/refresh.svg",
+          "dark": "resources/dark/refresh.svg"
+        }
+      }
+    ],
+    "views": {
+      "syllableCounterContainer": [
+        {
+          "id": "syllableCounter",
+          "name": "Syllable Counter",
+          "icon": "resources/light/document-search.svg",
+          "contextualTitle": "Syllable Counter"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "syllableCounterContainer",
+          "title": "Syllable Counter",
+          "icon": "resources/light/document-search.svg"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "syllableCounter.refreshEntry",
+          "when": "view == syllableCounter",
+          "group": "navigation"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "syllableCounter",
+        "contents": "No open document\n[Refresh](command:syllableCounter.refreshEntry)"
+      }
+    ]
   }
 }
